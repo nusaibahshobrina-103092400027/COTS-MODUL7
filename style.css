@@ -1,0 +1,304 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    height: 45px;
+    background-color: #bdbdbd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 13px;
+}
+
+/* TOOLBAR */
+.toolbar {
+    height: 45px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    padding: 6px 9px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #555;
+}
+
+button img {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.search {
+    display: flex;
+    border: 1px solid #ddd;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    padding: 6px;
+    width: 150px;
+}
+
+.search button {
+    background-color: white;
+    border: none;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    min-height: calc(100vh - 90px);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 28%;
+    background-color: #f5f5f5;
+    border-right: 3px solid #ccc;
+}
+
+.sidebar h4 {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.letter {
+    display: flex;
+    gap: 8px;
+    background-color: white;
+    border-left: 3px solid #555;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 3px;
+    font-size: 11px;
+}
+
+.letter > img {
+    width: 20px;
+    height: 20px;
+}
+
+.letter-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.letter-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.letter-header b {
+    line-height: 1.4;
+}
+
+.letter-header span {
+    text-align: right;
+    color: #999;
+    white-space: nowrap;
+    font-size: 10px;
+}
+
+.letter-info p {
+    margin-top: 5px;
+    color: #666;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    padding: 0 12px 20px;
+}
+
+.dashboard {
+    background-color: #f36b21;
+    color: white;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* CREATE BUTTON */
+.create {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 14px;
+}
+
+.create button {
+    font-size: 11px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 18px;
+}
+
+.card {
+    flex: 1;
+    min-width: 0;
+    color: white;
+}
+
+.green {
+    background-color: #20bd50;
+}
+
+.blue {
+    background-color: #20b4d8;
+}
+
+.red {
+    background-color: #f04b50;
+}
+
+.card-content {
+    min-height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+.card-content > img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.card-text {
+    text-align: right;
+}
+
+.card-text h1 {
+    font-size: 38px;
+}
+
+.card-text p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.card-footer {
+    height: 30px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9px;
+    font-size: 11px;
+}
+
+.green .card-footer {
+    color: #20a84a;
+}
+
+.blue .card-footer {
+    color: #159cbd;
+}
+
+.red .card-footer {
+    color: #df3d43;
+}
+
+.card-footer img {
+    width: 16px;
+    height: 16px;
+}
+
+/* TODO */
+.todo {
+    background-color: #7966b5;
+    margin-top: 18px;
+    padding: 10px;
+}
+
+.todo h4 {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.todo-search {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 6px 8px;
+}
+
+.todo-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 12px;
+}
+
+.todo-search img {
+    width: 16px;
+    height: 16px;
+}
+
+.empty-todo {
+    background-color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .toolbar {
+        flex-wrap: wrap;
+        gap: 8px;
+        height: auto;
+    }
+}
